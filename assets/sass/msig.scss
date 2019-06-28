@@ -483,7 +483,7 @@ footer {
                 @include breakpoint(max-width 767px) {
                     display: block;
                 }
-                >div {
+                >div:not(.slider__item__body) {
                     width: calc((100% - 40px) / 3);
                     margin-left: 20px;
                     &:first-child {
