@@ -205,7 +205,7 @@ header {
     height: 2px;
     @include translate(-50%, -50%);
     @include border-radius(2px);
-    @include animation(rip 8s 1 ease-out);
+    @include animation(rip 8s infinite ease-out);
     &::before,
     &::after {
         @extend %before-after;
@@ -214,7 +214,7 @@ header {
         left: 50%;
         width: 2px;
         height: 2px;
-        @include animation(rip 8s 1 ease-out);
+        @include animation(rip 8s infinite ease-out);
         @include transform(translate(-50%, -50%) scale(1.25));
         @include border-radius(2px);
     }

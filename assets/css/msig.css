@@ -777,9 +777,9 @@ header .header__right p span {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  -moz-animation: rip 8s 1 ease-out;
-  -webkit-animation: rip 8s 1 ease-out;
-  animation: rip 8s 1 ease-out;
+  -moz-animation: rip 8s infinite ease-out;
+  -webkit-animation: rip 8s infinite ease-out;
+  animation: rip 8s infinite ease-out;
 }
 .ripple__group {
   display: block;
@@ -842,9 +842,9 @@ header .header__right p span {
   left: 50%;
   width: 2px;
   height: 2px;
-  -moz-animation: rip 8s 1 ease-out;
-  -webkit-animation: rip 8s 1 ease-out;
-  animation: rip 8s 1 ease-out;
+  -moz-animation: rip 8s infinite ease-out;
+  -webkit-animation: rip 8s infinite ease-out;
+  animation: rip 8s infinite ease-out;
   -moz-transform: translate(-50%, -50%) scale(1.25);
   -ms-transform: translate(-50%, -50%) scale(1.25);
   -webkit-transform: translate(-50%, -50%) scale(1.25);
