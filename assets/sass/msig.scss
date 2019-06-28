@@ -186,15 +186,15 @@ header {
         }
     }
     &--scale1 {
-        @include scale(0.75);
+        @include scale(1);
         z-index: 3;
     }
     &--scale2 {
-        @include scale(1);
+        @include scale(1.35);
         z-index: 2;
     }
     &--scale3 {
-        @include scale(1.25);
+        @include scale(1.7);
         z-index: 1;
     }
     display: block;

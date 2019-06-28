@@ -73,6 +73,10 @@ $(function() {
         }
         $slider_navi_next.click(switch_next);
         $slider_navi_prev.click(switch_prev);
+        $slider_dot.children("li").click(function() {
+            index = $(this).index();
+            $slider_wrap.animate({ left: index * -slider_item_width }, switch_item);
+        });
         if ($(this).hasClass("slideshow--autoplay")) {
             var sid = setInterval(switch_next, 3000);
             $slider.hover(function() {
