@@ -398,6 +398,7 @@ footer {
                 height: 10px;
                 border: 1px solid $surface;
                 @include border-radius(50%);
+                cursor: pointer;
                 &.active {
                     background-color: $surface;
                 }
