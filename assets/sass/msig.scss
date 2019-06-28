@@ -147,7 +147,7 @@ header {
                 font-size: 24px;
                 font-weight: 500;
                 @include opacity(0);
-                @include animation(fadeIn 2s 7.75s alternate forwards 1);
+                @include animation(fadeIn 2s 8.75s alternate forwards 1);
                 @include breakpoint(768px) {
                     margin-left: -100px;
                     font-size: 36px;
@@ -190,10 +190,10 @@ header {
                         @include animation(fadeIn 1s 6.75s alternate forwards 1);
                     }
                     &:nth-child(11) {
-                        @include animation(fadeIn 1s 6.25s alternate forwards 1);
+                        @include animation(fadeIn 1s 7.25s alternate forwards 1);
                     }
                     &:nth-child(12) {
-                        @include animation(fadeIn 1s 7s alternate forwards 1);
+                        @include animation(fadeIn 1s 8s alternate forwards 1);
                     }
                 }
             }
