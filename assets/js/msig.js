@@ -2,7 +2,6 @@ $(function() {
     "use strict";
     var width = $(window).width(),
         oldhtml = "";
-    new WOW().init();
     //取得主文的位置
     var mainTop = $("main").offset().top;
     $("header .icon-down").click(function() {

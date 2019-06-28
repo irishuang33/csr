@@ -146,6 +146,8 @@ header {
                 color: $white;
                 font-size: 24px;
                 font-weight: 500;
+                @include opacity(0);
+                @include animation(fadeIn 2s 7.75s alternate forwards 1);
                 @include breakpoint(768px) {
                     margin-left: -100px;
                     font-size: 36px;
@@ -156,6 +158,43 @@ header {
                 span {
                     display: block;
                     color: $white;
+                    @include opacity(0);
+                    &:nth-child(1) {
+                        @include animation(fadeIn 1s 0s alternate forwards 1);
+                    }
+                    &:nth-child(2) {
+                        @include animation(fadeIn 1s 0.75s alternate forwards 1);
+                    }
+                    &:nth-child(3) {
+                        @include animation(fadeIn 1s 1.5s alternate forwards 1);
+                    }
+                    &:nth-child(4) {
+                        @include animation(fadeIn 1s 2.25s alternate forwards 1);
+                    }
+                    &:nth-child(5) {
+                        @include animation(fadeIn 1s 3s alternate forwards 1);
+                    }
+                    &:nth-child(6) {
+                        @include animation(fadeIn 1s 3.75s alternate forwards 1);
+                    }
+                    &:nth-child(7) {
+                        @include animation(fadeIn 1s 4.5s alternate forwards 1);
+                    }
+                    &:nth-child(8) {
+                        @include animation(fadeIn 1s 5.25s alternate forwards 1);
+                    }
+                    &:nth-child(9) {
+                        @include animation(fadeIn 1s 6s alternate forwards 1);
+                    }
+                    &:nth-child(10) {
+                        @include animation(fadeIn 1s 6.75s alternate forwards 1);
+                    }
+                    &:nth-child(11) {
+                        @include animation(fadeIn 1s 6.25s alternate forwards 1);
+                    }
+                    &:nth-child(12) {
+                        @include animation(fadeIn 1s 7s alternate forwards 1);
+                    }
                 }
             }
         }
@@ -533,6 +572,15 @@ footer {
     }
     100% {
         @include transform(rotate(25deg) scale(0.7));
+        @include opacity(1);
+    }
+}
+
+@include keyframes(fadeIn) {
+    0% {
+        @include opacity(0);
+    }
+    100% {
         @include opacity(1);
     }
 }

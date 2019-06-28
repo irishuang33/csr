@@ -748,6 +748,11 @@ header .header__right h1 {
   color: #fff;
   font-size: 24px;
   font-weight: 500;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-animation: fadeIn 2s 7.75s alternate forwards 1;
+  -webkit-animation: fadeIn 2s 7.75s alternate forwards 1;
+  animation: fadeIn 2s 7.75s alternate forwards 1;
 }
 @media (min-width: 768px) {
   header .header__right h1 {
@@ -761,6 +766,68 @@ header .header__right p {
 header .header__right p span {
   display: block;
   color: #fff;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+header .header__right p span:nth-child(1) {
+  -moz-animation: fadeIn 1s 0s alternate forwards 1;
+  -webkit-animation: fadeIn 1s 0s alternate forwards 1;
+  animation: fadeIn 1s 0s alternate forwards 1;
+}
+header .header__right p span:nth-child(2) {
+  -moz-animation: fadeIn 1s 0.75s alternate forwards 1;
+  -webkit-animation: fadeIn 1s 0.75s alternate forwards 1;
+  animation: fadeIn 1s 0.75s alternate forwards 1;
+}
+header .header__right p span:nth-child(3) {
+  -moz-animation: fadeIn 1s 1.5s alternate forwards 1;
+  -webkit-animation: fadeIn 1s 1.5s alternate forwards 1;
+  animation: fadeIn 1s 1.5s alternate forwards 1;
+}
+header .header__right p span:nth-child(4) {
+  -moz-animation: fadeIn 1s 2.25s alternate forwards 1;
+  -webkit-animation: fadeIn 1s 2.25s alternate forwards 1;
+  animation: fadeIn 1s 2.25s alternate forwards 1;
+}
+header .header__right p span:nth-child(5) {
+  -moz-animation: fadeIn 1s 3s alternate forwards 1;
+  -webkit-animation: fadeIn 1s 3s alternate forwards 1;
+  animation: fadeIn 1s 3s alternate forwards 1;
+}
+header .header__right p span:nth-child(6) {
+  -moz-animation: fadeIn 1s 3.75s alternate forwards 1;
+  -webkit-animation: fadeIn 1s 3.75s alternate forwards 1;
+  animation: fadeIn 1s 3.75s alternate forwards 1;
+}
+header .header__right p span:nth-child(7) {
+  -moz-animation: fadeIn 1s 4.5s alternate forwards 1;
+  -webkit-animation: fadeIn 1s 4.5s alternate forwards 1;
+  animation: fadeIn 1s 4.5s alternate forwards 1;
+}
+header .header__right p span:nth-child(8) {
+  -moz-animation: fadeIn 1s 5.25s alternate forwards 1;
+  -webkit-animation: fadeIn 1s 5.25s alternate forwards 1;
+  animation: fadeIn 1s 5.25s alternate forwards 1;
+}
+header .header__right p span:nth-child(9) {
+  -moz-animation: fadeIn 1s 6s alternate forwards 1;
+  -webkit-animation: fadeIn 1s 6s alternate forwards 1;
+  animation: fadeIn 1s 6s alternate forwards 1;
+}
+header .header__right p span:nth-child(10) {
+  -moz-animation: fadeIn 1s 6.75s alternate forwards 1;
+  -webkit-animation: fadeIn 1s 6.75s alternate forwards 1;
+  animation: fadeIn 1s 6.75s alternate forwards 1;
+}
+header .header__right p span:nth-child(11) {
+  -moz-animation: fadeIn 1s 6.25s alternate forwards 1;
+  -webkit-animation: fadeIn 1s 6.25s alternate forwards 1;
+  animation: fadeIn 1s 6.25s alternate forwards 1;
+}
+header .header__right p span:nth-child(12) {
+  -moz-animation: fadeIn 1s 7s alternate forwards 1;
+  -webkit-animation: fadeIn 1s 7s alternate forwards 1;
+  animation: fadeIn 1s 7s alternate forwards 1;
 }
 
 .ripple {
@@ -1297,6 +1364,30 @@ footer p span {
     -ms-transform: rotate(25deg) scale(0.7);
     -webkit-transform: rotate(25deg) scale(0.7);
     transform: rotate(25deg) scale(0.7);
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
