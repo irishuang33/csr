@@ -480,7 +480,10 @@ footer {
             }
             &--slice {
                 display: flex;
-                >div:not(.slider__item__body) {
+                @include breakpoint(max-width 767px) {
+                    display: block;
+                }
+                >div {
                     width: calc((100% - 40px) / 3);
                     margin-left: 20px;
                     &:first-child {
@@ -502,19 +505,6 @@ footer {
                     }
                 }
             }
-        }
-    }
-    &.slideshow--desktop {
-        @include breakpoint(max-width 767px) {
-            display: none;
-        }
-    }
-    &.slideshow--mobile {
-        @include breakpoint(768px) {
-            display: none;
-        }
-        .slider__item--slice {
-            display: block;
         }
     }
 }

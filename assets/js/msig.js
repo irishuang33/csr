@@ -1,6 +1,7 @@
 $(function() {
     "use strict";
-    var width = $(window).width();
+    var width = $(window).width(),
+        oldhtml = "";
     new WOW().init();
     //取得主文的位置
     var mainTop = $("main").offset().top;
@@ -9,6 +10,59 @@ $(function() {
             scrollTop: mainTop
         }, 700);
     });
+    if (width >= 768) {
+        oldhtml += "<div class='slider__item slider__item--slice'>";
+        for (var j = 0; j < 3; j++) {
+            oldhtml += "<div><a href='";
+            oldhtml += data[j]["link"];
+            oldhtml += "' target='_blank'><img class='slider__item__img' src='";
+            oldhtml += data[j]["image"];
+            oldhtml += "' alt='";
+            oldhtml += data[j]["title"];
+            oldhtml += "'></a><div class='slider__item__body'><a href='";
+            oldhtml += data[j]["link"];
+            oldhtml += "' class='h3' target='_blank' data-title='";
+            oldhtml += data[j]["title"];
+            oldhtml += "'></a><p data-title='";
+            oldhtml += data[j]["preview"];
+            oldhtml += "'></p></div></div>";
+        }
+        oldhtml += "</div>";
+        oldhtml += "<div class='slider__item slider__item--slice'>";
+        for (var j = 3; j < data.length; j++) {
+            oldhtml += "<div><a href='";
+            oldhtml += data[j]["link"];
+            oldhtml += "' target='_blank'><img class='slider__item__img' src='";
+            oldhtml += data[j]["image"];
+            oldhtml += "' alt='";
+            oldhtml += data[j]["title"];
+            oldhtml += "'></a><div class='slider__item__body'><a href='";
+            oldhtml += data[j]["link"];
+            oldhtml += "' class='h3' target='_blank' data-title='";
+            oldhtml += data[j]["title"];
+            oldhtml += "'></a><p data-title='";
+            oldhtml += data[j]["preview"];
+            oldhtml += "'></p></div></div>";
+        }
+        oldhtml += "</div>";
+    } else {
+        for (var j = 0; j < data.length; j++) {
+            oldhtml += "<div class='slider__item slider__item--slice'><a href='";
+            oldhtml += data[j]["link"];
+            oldhtml += "' target='_blank'><img class='slider__item__img' src='";
+            oldhtml += data[j]["image"];
+            oldhtml += "' alt='";
+            oldhtml += data[j]["title"];
+            oldhtml += "'></a><div class='slider__item__body'><a href='";
+            oldhtml += data[j]["link"];
+            oldhtml += "' class='h3' target='_blank' data-title='";
+            oldhtml += data[j]["title"];
+            oldhtml += "'></a><p data-title='";
+            oldhtml += data[j]["preview"];
+            oldhtml += "'></p></div></div>";
+        }
+    }
+    $(".slider__wrap--fill").html(oldhtml);
     // slideshow
     $(".slideshow").each(function() {
         var $slider = $(this).children(".slider"),
@@ -23,6 +77,14 @@ $(function() {
             slider_item_index = 0, //預宣告slide為0
             index = 0,
             dot = "";
+        for (var i = 0; i < slider_count; i++) {
+            dot += "<li";
+            if (i == 0) {
+                dot += " class=\"active\"";
+            }
+            dot += "></li>";
+        }
+        $slider_dot.html(dot);
         $slider_item.first().clone().css({
             "width": slider_item_width
         }).appendTo($slider_wrap);
@@ -32,16 +94,7 @@ $(function() {
         $slider_item.css({
             "width": slider_item_width
         });
-        for (var i = 0; i < slider_count; i++) {
-            i = i;
-            dot += "<li";
-            if (i == 0) {
-                dot += " class=\"active\"";
-            }
-            dot += "></li>";
-        }
-        $slider_dot.html(dot);
-        console.log(slider_count);
+        console.log(slider_item_width);
 
         function switch_next() {
             if ($slider_wrap.is(":animated")) return;
