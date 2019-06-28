@@ -176,8 +176,8 @@ header {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 200px;
-            height: 200px;
+            width: 500px;
+            height: 500px;
             @include filter-gradient($surface, rgba($surface, 0), horizontal);
             @include background-image(radial-gradient(center, ellipse cover, $surface 0%, rgba($surface, 0) 100%));
             @include border-radius(50%);
