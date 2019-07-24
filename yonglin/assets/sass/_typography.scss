@@ -1,0 +1,117 @@
+// $baseLineHeight: 10px;
+// @function padding($count: 1) {
+// 	@return $baseLineHeight * $count;
+// }
+// 標題
+$h-color: $text, $text, $text, $primary, $secondary;
+$h-size: 48px, 22px, 18px, 1rem, 14px;
+$h-lh: 1.3, 1.2, 2, 1.2, 1;
+@for $i from 1 through 5 {
+	h#{$i} {
+		font-weight: 500;
+	}
+	h#{$i}, .h#{$i} {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		word-break: break-word;
+		.heading__icon {
+			display: inline-block;
+			margin-right: 10px;
+			font-size: 0.9em;
+			vertical-align: sub;
+			&--correct {
+				color: $surface;
+			}
+			&--error {
+				color: $primary;
+			}
+		}
+	}
+}
+@for $i from 1 through 2 {
+		h#{$i}, .h#{$i} {
+		color: nth($h-color, $i);
+		font-size: nth($h-size, $i);
+		line-height: nth($h-lh, $i);
+	}
+}
+@for $i from 3 through 5 {
+	h#{$i}, .h#{$i} {
+		color: nth($h-color, $i);
+		font-size: nth($h-size, $i);
+		line-height: nth($h-lh, $i);
+	}
+	.h#{$i} {
+		font-weight: normal;
+	}
+}
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+p {
+	color: $text;
+	word-break: break-word;
+	.heading__icon {
+		display: inline-block;
+		margin-right: 10px;
+		font-size: 0.9em;
+		vertical-align: sub;
+	}
+	a.link-btn {
+		color: $surface;
+		text-decoration: underline;
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+.summary {
+	color: $surface;
+}
+blockquote {
+	color: $text;
+	font-weight: 500;
+}
+ul.keyword {
+	margin: 1.125em 0;
+	padding: 0;
+	font-size: 0;
+	list-style: none;
+	li {
+		display: inline-block;
+		font-size: 1.125em;
+		&::after {
+			content: '、';
+		}
+		&:last-child {
+			&::after {
+				content: '';
+			}
+		}
+		a {
+			display: inline-block;
+			color: $primary;
+			&:hover {
+				color: $primary-variant;
+			}
+		}
+	}
+}
+.index-page {
+	p {
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+}
+.article-page {
+	line-height: 1.8;
+	p {
+		font-size: 1.125rem;
+	}
+}
