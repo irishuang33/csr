@@ -116,6 +116,7 @@ nav {
 	}
 }
 header {
+	position: relative;
 	.swiper {
 		img {
 			width: 100%;
@@ -135,9 +136,12 @@ header {
 				}
 			}
 			&-slide {
-				height: 100vh;
+				height: 177.777778vw;
 				background-repeat: no-repeat;
 				@include background-size(cover);
+				@include breakpoint(768px) {
+					height: 100vh;
+				}
 				&.slide--v {
 					background-position: center;
 				}
