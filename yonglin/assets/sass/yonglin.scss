@@ -136,9 +136,23 @@ header {
 			}
 			&-slide {
 				height: 100vh;
-				background-position: center;
 				background-repeat: no-repeat;
 				@include background-size(cover);
+				&.slide--v {
+					background-position: center;
+				}
+				&.slide--01 {
+					background-position: 26% center;
+					@include breakpoint(768px) {
+						background-position: center;
+					}
+				}
+				&.slide--02 {
+					background-position: 66% center;
+				}
+				&.slide--03 {
+					background-position: left center;
+				}
 			}
 		}
 	}
@@ -146,8 +160,12 @@ header {
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		padding-top: 50px;
 		@include translate(-50%, -50%);
 		z-index: 5;
+		@include breakpoint(768px) {
+			padding-top: 100px;
+		}
 		> .flex {
 			flex-direction: column;
 			@include breakpoint(768px) {
