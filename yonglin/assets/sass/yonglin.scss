@@ -140,7 +140,7 @@ header {
 				background-repeat: no-repeat;
 				@include background-size(cover);
 				@include breakpoint(768px) {
-					height: 100vh;
+					height: 50.78125vw;
 				}
 				&.slide--v {
 					background-position: center;
@@ -156,6 +156,10 @@ header {
 				}
 				&.slide--03 {
 					background-position: left center;
+					@include breakpoint(768px) {
+						@include background-size(105%);
+						background-position: right center;
+					}
 				}
 			}
 		}
@@ -167,7 +171,7 @@ header {
 		padding-top: 50px;
 		@include translate(-50%, -50%);
 		z-index: 5;
-		@include breakpoint(768px) {
+		@include breakpoint(1024px) {
 			padding-top: 100px;
 		}
 		> .flex {
@@ -180,7 +184,14 @@ header {
 			color: $white;
 			font-size: 48px;
 			font-weight: 200;
+			@include scale(0.95, 1);
 			@include breakpoint(768px) {
+				margin-bottom: 0.5em;
+			}
+			@include breakpoint(1024px) {
+				font-size: 54px;
+			}
+			@include breakpoint(1920px) {
 				font-size: 66px;
 			}
 			@include breakpoint(max-width 767px) {
@@ -205,6 +216,9 @@ header {
 			width: 100%;
 			height: auto;
 			@include breakpoint(768px) {
+				width: 480px;
+			}
+			@include breakpoint(1920px) {
 				width: 540px;
 			}
 		}
