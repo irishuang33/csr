@@ -161,6 +161,18 @@ header {
 						background-position: right center;
 					}
 				}
+				&.slide--04 {
+					background-position: 75% center;
+					@include breakpoint(768px) {
+						background-position: left center;
+					}
+				}
+				&.slide--05 {
+					background-position: 2% center;
+					@include breakpoint(768px) {
+						background-position: center;
+					}
+				}
 			}
 		}
 	}
